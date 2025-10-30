@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>شركة التحول التقني - نسخة مطابقة</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    
+<!-- تأكد من إضافة Font Awesome في <head> -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+
+    
+
+ <style>
+  /* 🎨 Root Variables */
+  :root {
+    --p1: #7a2cff; /* deep purple */
+    --p2: #ff4db2; /* pink */
+    --accent: linear-gradient(90deg, var(--p1), var(--p2));
+  }
+
+  body {
+    font-family: 'Cairo', sans-serif;
+    background: #fff;
+    color: #2b2b2b;
+  }
+
+  /* 🌟 Navbar */
+  .main-nav {
+    background: transparent;
+    padding: 1rem 2rem;
+  }
+
+  .brand {
+    font-weight: 800;
+    color: #fff;
+  }
+
+  .nav-bg {
+    background: linear-gradient(180deg, rgba(122,44,255,0.95), rgba(255,77,178,0.95));
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding-bottom: 4rem;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.95)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+     
+/* يمنع النص من النزول لسطر جديد داخل الأزرار */
+.navbar .btn {
+  white-space: nowrap;         /* يبقي النص في سطر واحد */
+  display: inline-flex;        /* يحافظ على تنسيق الزر */
+  align-items: center;         /* توسيط النص عموديًا */
+  justify-content: center;     /* توسيط أفقي */
+  text-align: center;          /* محاذاة النص */
+  line-height: 1.3;            /* سطر مريح */
+  padding: 6px 14px;           /* تباعد مناسب */
+  font-size: 0.9rem;           /* حجم نص متناسق */
+}
+
+     
+.dropdown-menu {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  padding: 8px 0;
+}
+
+.dropdown-item {
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 10px 20px;
+}
+
+.dropdown-item:hover {
+  background: linear-gradient(90deg, #7a2cff, #ff4db2);
+  color: #fff;
+  transform: translateX(-4px);
+}
+
+
+  /* 🦋 Hero Section */
+  .hero {
+    padding: 4rem 2rem 6rem;
+    color: #fff;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+  }
+
+  .hero p {
+    opacity: 0.95;
+  }
+    
+
+  .btn-outline-light {
+    border-color: rgba(255,255,255,0.25);
+  }
+
+  /* ⚪ Swiper Pagination (Elegant Style) */
+  .swiper-pagination {
+    text-align: center;
+  }
+
+  .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    background: rgba(255,255,255,0.3);
+    opacity: 1;
+    border-radius: 50%;
+    margin: 0 6px !important;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(255,255,255,0.4);
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #7a2cff, #ff4db2);
+    box-shadow: 0 0 12px rgba(122,44,255,0.6), 0 0 12px rgba(255,77,178,0.6);
+  }
+
+  /* 💼 Services Grid */
+  .services {
+    margin-top: -3rem;
+    padding: 0 2rem 3rem;
+  }
+
+  .service-card {
+    background: linear-gradient(180deg, #fff, #f7f7ff);
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(11,6,26,.12);
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .service-card .icon-wrap {
+    height: 120px;
+    border-radius: 12px;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: .8rem;
+  }
+
+  .service-card img {
+    max-width: 70%;
+  }
+
+  /* 💜 Purple Band */
+  .purple-band {
+    background: linear-gradient(180deg, #2c0558, #7a2cff);
+    padding: 3rem 2rem;
+    color: #fff;
+  }
+
+  .partners {
+    padding: 3rem 2rem;
+    background: #fff;
+  }
+
+  /* 🗣️ Testimonial Card */
+  .testimonial-card {
+    background: rgba(255,255,255,0.15);
+    border-radius: 18px;
+    padding: 2rem;
+    box-shadow: 0 6px 30px rgba(9,6,35,.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  }
+
+  /* 🔷 Hexagon Image */
+  .hex {
+    width: 320px;
+    height: 320px;
+    clip-path: polygon(25% 6%,75% 6%,100% 50%,75% 94%,25% 94%,0 50%);
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .contact-cards .card {
+    border-radius: 18px;
+    padding: 1.2rem;
+  }
+
+  /* 🦶 Footer */
+  footer {
+    background: linear-gradient(180deg, #2c0558, #7a2cff);
+    color: #fff;
+    padding: 3rem 2rem;
+  }
+
+  /* 📱 Responsive */
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 1.6rem; }
+    .hex { width: 260px; height: 260px; }
+  }
+
+  /* 💠 Why Section */
+  .why-card {
+    max-width: 340px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+
+  .why-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  }
+
+  .icon-circle {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffda79, #ff4db2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #4b008f;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  }
+
+  .why-swiper .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    background: rgba(255,255,255,0.4);
+    opacity: 1;
+    margin: 0 6px !important;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+  }
+
+  .why-swiper .swiper-pagination-bullet-active {
+    width: 22px;
+    height: 22px;
+    background: linear-gradient(135deg, #ffda79, #ff4db2);
+    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+  }
+
+  /* 🚀 Journey & Vision */
+  .journey-badge {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: linear-gradient(135deg,#ffda79,#ff4db2);
+    color: #4b008f;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    font-size: 1.1rem;
+  }
+
+  .vision-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.2);
+    transition: all 0.4s ease;
+  }
+
+  .vision-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg,#ffda79,#ff4db2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+
+</head>
+<body>
+
+  <!-- NAV & HERO -->
+  <header class="nav-bg">
+ <nav class="navbar navbar-expand-md main-nav container-lg">
+  <div class="container-fluid px-0">
+    <a class="navbar-brand d-flex align-items-center brand" href="#">
+      <img src="logo.jpeg" alt="logo" style="width:50px;height:50px;border-radius:10px;background:rgba(255,255,255,.12);margin-inline-start:8px">
+    </a>
+
+    <!-- زر الفتح في الجوال -->
+    <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavMenu" aria-controls="mainNavMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- القائمة القابلة للطي -->
+    <div class="collapse navbar-collapse justify-content-end mt-3 mt-md-0" id="mainNavMenu">
+      <div class="d-flex flex-column flex-md-row gap-2 gap-md-3 align-items-md-center">
+
+        <!-- العناصر الأساسية -->
+        <a href="#hero" class="btn btn-sm btn-outline-light">الرئيسية</a>
+        <a href="#services" class="btn btn-sm btn-outline-light">خدماتنا</a>
+        <a href="#why" class="btn btn-sm btn-outline-light">لماذا التحول الرقمي</a>
+        <a href="#journey" class="btn btn-sm btn-outline-light">بداية الرحلة</a>
+           <a href="#vision" class="btn btn-sm btn-outline-light">الرؤية المستقبلية</a>
+        <a href="#news" class="btn btn-sm btn-outline-light">اخر الاخبار</a>
+          
+        <!-- قائمة المزيد -->
+        <div class="dropdown">
+          <button class="btn btn-sm btn-outline-light dropdown-toggle w-100" type="button" id="moreMenu" data-bs-toggle="dropdown" aria-expanded="false">
+            المزيد
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end text-end" aria-labelledby="moreMenu">
+            <li><a class="dropdown-item" href="#partners">شركاؤنا</a></li>
+            <li><a class="dropdown-item" href="#testimonials">قالوا عنا</a></li>
+            <li><a class="dropdown-item" href="#join">انضم إلينا</a></li>
+            <li><a class="dropdown-item" href="#contact">تواصل معنا</a></li>
+            <li><a class="dropdown-item" href="#footer">احصل على الخدمة</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+    <div class="container-lg hero" id="hero">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h1>شركة فورا - FAWRA</h1>
+            <p class="lead">خلّنا نكون شريكك التقني من أول خطوة كل فورة تبدأ بفكرة وحنّا نحولها واقع</p>
+          <div class="mt-4">
+            <a class="btn btn-light btn-lg me-2">اطلب الخدمة</a>
+            <a class="btn btn-outline-light btn-lg">من نحن</a>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block text-start">
+          <!-- decorative hero image / badge -->
+          <div style="width:100%;height:220px;border-radius:18px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center">
+            <div style="width:86%;height:80%;background:linear-gradient(90deg,#fff1,#fff3);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;opacity:.9">
+                <img src="hero_1_6888d5c70166a3.71346721.jpg" alt="صورة ترويجية" 
+         style="width:86%; height:80%; object-fit:cover; border-radius:12px;">
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services grid -->
+<section class="services container-lg" id="services">
+  <div class="row g-4">
+
+    <!-- التسويق الرقمي -->
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="service-card h-100">
+        <div class="icon-wrap"><i class="fas fa-bullhorn fa-2x" style="color:#fff"></i></div>
+        <h6 class="mt-2">التسويق الرقمي</h6>
+      </div>
+    </div>
+
+    <!-- حلول واتساب API -->
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="service-card h-100">
+        <div class="icon-wrap"><i class="fab fa-whatsapp fa-2x" style="color:#fff"></i></div>
+        <h6 class="mt-2">حلول واتساب API</h6>
+      </div>
+    </div>
+
+    <!-- التصميم والهوية -->
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="service-card h-100">
+        <div class="icon-wrap"><i class="fas fa-pencil-ruler fa-2x" style="color:#fff"></i></div>
+        <h6 class="mt-2">التصميم والهوية</h6>
+      </div>
+    </div>
+
+    <!-- الحلول التقنية -->
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="service-card h-100">
+        <div class="icon-wrap"><i class="fas fa-cogs fa-2x" style="color:#fff"></i></div>
+        <h6 class="mt-2">الحلول التقنية</h6>
+      </div>
+    </div>
+
+    <!-- تسويق عبر المؤثرين -->
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="service-card h-100">
+        <div class="icon-wrap"><i class="fas fa-users fa-2x" style="color:#fff"></i></div>
+        <h6 class="mt-2">تسويق عبر المؤثرين</h6>
+      </div>
+    </div>
+
+    <!-- التصوير والإنتاج الفني -->
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="service-card h-100">
+        <div class="icon-wrap"><i class="fas fa-camera fa-2x" style="color:#fff"></i></div>
+        <h6 class="mt-2">التصوير والإنتاج الفني</h6>
+      </div>
+    </div>
+
+    <!-- المطبوعات -->
+      <!--
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="service-card h-100">
+        <div class="icon-wrap"><i class="fas fa-print fa-2x" style="color:#fff"></i></div>
+        <h6 class="mt-2">المطبوعات</h6>
+      </div>
+    </div>
+-->
+
+  </div>
+</section>
+
+<!-- لماذا  فورا -->
+<section id="why" class="why-digital py-5 text-center text-white" style="background: linear-gradient(135deg, #4b008f, #7a2cff); position:relative; overflow:hidden;">
+  <div class="container-lg position-relative">
+    <h2 class="mb-5 fw-bold">لماذا <span style="color:#ffda79;"> فورا - FAWRA؟</span></h2>
+
+    <div class="swiper why-swiper pb-5">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="why-card mx-auto p-4">
+            <div class="icon-circle mb-3">
+              <i class="bi bi-lightning-charge-fill"></i>
+            </div>
+            <h5>تسريع الأداء</h5>
+            <p>التحول الرقمي يعزز من سرعة العمل وفعالية اتخاذ القرار باستخدام الأدوات التقنية الذكية.</p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="why-card mx-auto p-4">
+            <div class="icon-circle mb-3">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <h5>تمكين الفرق</h5>
+            <p>يساعد على تمكين الموظفين عبر الوصول إلى البيانات بسهولة وتسهيل التعاون الرقمي.</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="why-card mx-auto p-4">
+            <div class="icon-circle mb-3">
+              <i class="bi bi-bar-chart-fill"></i>
+            </div>
+            <h5>رفع الكفاءة</h5>
+            <p>يقلل التكاليف ويزيد الكفاءة التشغيلية عبر أتمتة العمليات وتحليل الأداء المستمر.</p>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="why-card mx-auto p-4">
+            <div class="icon-circle mb-3">
+              <i class="bi bi-globe2"></i>
+            </div>
+            <h5>الوصول العالمي</h5>
+            <p>يمكنك الوصول إلى جمهور أوسع حول العالم بفضل الحلول الرقمية المتقدمة.</p>
+          </div>
+        </div>
+
+      </div>
+      <!-- Pagination -->
+      <div class="swiper-pagination mt-4"></div>
+    </div>
+  </div>
+
+  <!-- خلفية زخرفية شفافة -->
+  <div style="position:absolute;top:-80px;right:-100px;width:300px;height:300px;background:radial-gradient(circle,rgba(255,255,255,0.2),transparent 70%);border-radius:50%;"></div>
+  <div style="position:absolute;bottom:-100px;left:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,0.15),transparent 80%);border-radius:50%;"></div>
+</section>
+    
+    
+
+<!-- بداية الرحلة -->
+<section id="journey" class="journey-section py-5" style="background:#f9f7ff; position:relative; overflow:hidden;">
+  <div class="container-lg">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="journey-image position-relative">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" 
+               alt="بداية الرحلة" class="rounded-4 shadow-lg w-100" 
+               style="object-fit:cover; height:350px;">
+          <div class="journey-badge">2010</div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-3" style="color:#4b008f;">بداية الرحلة</h2>
+        <p class="lead text-muted">
+          انطلقت <strong>شركة فورا - FAWRA</strong> في عام 2025 برؤية واضحة لتسخير التقنية لخدمة المجتمع والجهات غير الربحية.  
+          بدأنا بخطوات صغيرة وطموحات كبيرة، واليوم نفتخر بأننا شركاء نجاح لمئات المؤسسات في رحلتهم نحو المستقبل الرقمي.
+        </p>
+        <a href="#" class="btn btn-primary mt-3" style="background:linear-gradient(90deg,#7a2cff,#ff4db2);border:none;">تعرف أكثر</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- خلفية زخرفية -->
+  <div style="position:absolute;top:-60px;left:-80px;width:250px;height:250px;background:radial-gradient(circle,rgba(122,44,255,0.1),transparent 70%);border-radius:50%;"></div>
+</section>
+
+    
+
+    
+<!-- الرؤية المستقبلية -->
+<section id="vision" class="future-section text-white text-center py-5" style="background:linear-gradient(135deg,#2c0558,#7a2cff); position:relative; overflow:hidden;">
+  <div class="container-lg position-relative">
+    <h2 class="fw-bold mb-4">رؤيتنا <span style="color:#ffda79;">للمستقبل</span></h2>
+    <p class="lead mb-5" style="max-width:700px;margin:auto;opacity:0.9;">
+      نطمح لأن نكون <strong>الرياديين في التحول الرقمي</strong> محليًا وإقليميًا،  
+      عبر تقديم حلول مبتكرة، وتمكين الكفاءات التقنية، وبناء منظومة مستدامة من المعرفة والتطوير.
+    </p>
+
+    <!-- بطاقات الرؤية -->
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4">
+        <div class="vision-card p-4 rounded-4">
+          <i class="bi bi-rocket-takeoff-fill display-5 mb-3 text-gradient"></i>
+          <h5>الابتكار المستمر</h5>
+          <p class="small">نستثمر في الأبحاث والتطوير لابتكار حلول تقنية تواكب المستقبل.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="vision-card p-4 rounded-4">
+          <i class="bi bi-globe-americas display-5 mb-3 text-gradient"></i>
+          <h5>توسّع عالمي</h5>
+          <p class="small">نعمل على توسيع نطاق خدماتنا لتشمل أسواقًا جديدة حول العالم.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="vision-card p-4 rounded-4">
+          <i class="bi bi-heart-fill display-5 mb-3 text-gradient"></i>
+          <h5>أثر مجتمعي</h5>
+          <p class="small">نضع المجتمع في قلب استراتيجيتنا لبناء مستقبل رقمي يخدم الإنسان أولًا.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- زخارف شفافة -->
+  <div style="position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,0.15),transparent 70%);border-radius:50%;"></div>
+  <div style="position:absolute;bottom:-120px;left:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,0.1),transparent 80%);border-radius:50%;"></div>
+</section>
+
+<!-- قسم الأخبار -->
+<section id="news" class="purple-band py-5">
+  <div class="container-lg">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10">
+        <div class="swiper news-swiper">
+          <div class="swiper-wrapper" id="news-container">
+            <!-- الأخبار سيتم إضافتها هنا بواسطة JS -->
+          </div>
+          <!-- Pagination (دوائر صغيرة) -->
+          <div class="swiper-pagination mt-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
+ <!-- شريط شركاء النجاح متحرك -->
+<section id="partners" class="partners container-lg text-center py-5">
+  <h4 class="mb-4">نفخر بشركاء النجاح</h4>
+  <div class="swiper partners-swiper rounded shadow-sm p-4" style="background:#fff">
+    <div class="swiper-wrapper align-items-center">
+
+      <div class="swiper-slide d-flex justify-content-center">
+        <img src="team1.png" alt="partner" style="max-width:100%; object-fit: contain;">
+      </div>
+      <div class="swiper-slide d-flex justify-content-center">
+        <img src="team2.png" alt="partner" style="max-width:100%; object-fit: contain;">
+      </div>
+      <div class="swiper-slide d-flex justify-content-center">
+        <img src="team3.png" alt="partner" style="max-width:100%; object-fit: contain;">
+      </div>
+      <div class="swiper-slide d-flex justify-content-center">
+        <img src="team4.png" alt="partner" style="max-width:100%; object-fit: contain;">
+      </div>
+      <div class="swiper-slide d-flex justify-content-center">
+        <img src="team5.png" alt="partner" style="max-width:100%; object-fit: contain;">
+      </div>
+      <div class="swiper-slide d-flex justify-content-center">
+        <img src="team6.png" alt="partner" style="max-width:100%; object-fit: contain;">
+      </div>
+         <div class="swiper-slide d-flex justify-content-center">
+        <img src="team7.png" alt="partner" style="max-width:100%; object-fit: contain;">
+      </div>
+      <div class="swiper-slide d-flex justify-content-center">
+        <img src="team8.png" alt="partner" style="max-width:100%; object-fit: contain;">
+      </div>
+        
+      <div class="swiper-slide d-flex justify-content-center">
+        <img src="team9.png" alt="partner" style="max-width:100%; object-fit: contain;">
+      </div>
+        
+    </div>
+  </div>
+</section>
+
+
+ <!-- شريط الشهادات المتحرك مع الحفاظ على الخلفية الأصلية -->
+<section class="purple-band text-center py-5">
+  <div class="container-lg">
+       <h1 class="mb-3">قالوا عن فورا - FAWRA</h1>
+    <p>هذه شهادة توضيحية مختصرة من أحد شركائنا حول جودة الخدمات المقدمة والتعاون المثمر.</p>
+    <div class="swiper testimonial-swiper">
+      <div class="swiper-wrapper">
+
+        <!-- شهادة 1 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card mx-auto p-4" style="max-width:600px;">
+            <h5 class="mb-3">قالوا عن التحول التقني</h5>
+            <p>هذه شهادة توضيحية مختصرة من أحد شركائنا حول جودة الخدمات المقدمة والتعاون المثمر.</p>
+            <small class="text-muted">— مؤسسة شريكة</small>
+          </div>
+        </div>
+
+        <!-- شهادة 2 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card mx-auto p-4" style="max-width:600px;">
+            <h5 class="mb-3">تعليق رائع من عميل</h5>
+            <p>تجربتنا مع التحول التقني كانت ممتازة وساعدتنا على تطوير خدماتنا الرقمية.</p>
+            <small class="text-muted">— شركة تقنية</small>
+          </div>
+        </div>
+
+        <!-- شهادة 3 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card mx-auto p-4" style="max-width:600px;">
+            <h5 class="mb-3">تعاون مثمر</h5>
+            <p>الدعم والاحترافية من فريق التحول التقني جعل مشروعنا ناجحًا جدًا.</p>
+            <small class="text-muted">— مؤسسة تعليمية</small>
+          </div>
+        </div>
+
+      </div>
+      <!-- Pagination فقط -->
+      <div class="swiper-pagination mt-4"></div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- قسم طلب الخدمة مع صورة سداسية -->
+<section class="container-lg py-5">
+  <div class="row align-items-center">
+    <div class="col-lg-6 mb-4 mb-lg-0">
+      <div class="hex mx-auto" style="width:350px; height:350px; clip-path: polygon(25% 6%,75% 6%,100% 50%,75% 94%,25% 94%,0 50%); overflow:hidden; border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.15);">
+        <img src="logo.jpeg" alt="service" style="width:100%;height:100%;object-fit:cover;transition: transform 0.3s ease;">
+      </div>
+    </div>
+    <div class="col-lg-6 text-center text-lg-start">
+      <h3>اطلب خدماتنا الرقمية الآن</h3>
+      <p class="lead">نقدم حلولاً متكاملة في التسويق الرقمي، التصميم، التطوير التقني، والتصوير الإبداعي لدعم أعمالك ونموها.</p>
+      <a href="#contact" class="btn btn-outline-primary btn-lg mt-3">طلب الخدمة</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact" class="py-5" style="background: linear-gradient(180deg,#2c0558,#7a2cff); color:#fff;">
+  <div class="container-lg">
+    <div class="row align-items-start">
+
+      <!-- شعار وحقوق -->
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5 class="mb-3">فورا - FAWRA</h5>
+        <p class="small mb-2">كل الحقوق محفوظة © 2025 التحول التقني</p>
+        <!-- أيقونات وسائل التواصل -->
+        <div class="d-flex gap-2 mt-2">
+          <a href="#" class="text-white fs-5"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white fs-5"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white fs-5"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white fs-5"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="text-white fs-5"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- روابط التنقل -->
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h6 class="mb-3">روابط سريعة</h6>
+        <ul class="list-unstyled small">
+          <li><a href="#hero" class="text-white text-decoration-none">الرئيسية</a></li>
+          <li><a href="#services" class="text-white text-decoration-none">خدماتنا</a></li>
+          <li><a href="#why" class="text-white text-decoration-none">لماذا التحول الرقمي</a></li>
+          <li><a href="#journey" class="text-white text-decoration-none">بداية الرحلة</a></li>
+          <li><a href="#vision" class="text-white text-decoration-none">الرؤية المستقبلية</a></li>
+          <li><a href="#news" class="text-white text-decoration-none">الأخبار والورش</a></li>
+          <li><a href="#partners" class="text-white text-decoration-none">شركاؤنا</a></li>
+          <li><a href="#contact" class="text-white text-decoration-none">تواصل معنا</a></li>
+        </ul>
+      </div>
+
+      <!-- تواصل -->
+      <div class="col-md-4 text-md-end">
+        <h6 class="mb-3">تواصل معنا</h6>
+        <p class="small mb-1"><i class="fas fa-envelope me-2"></i>info@yourcompany.com</p>
+        <p class="small mb-1"><i class="fas fa-phone me-2"></i>+966562551216</p>
+        <p class="small mb-1"><i class="fas fa-map-marker-alt me-2"></i>المدينة المنورة المملكة العربية السعودية</p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<!-- تأكد من إضافة Font Awesome في الـ head -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // small interactions (placeholder)
+    document.querySelectorAll('.service-card').forEach(c=>{
+      c.addEventListener('mouseenter',()=>c.style.transform='translateY(-6px)');
+      c.addEventListener('mouseleave',()=>c.style.transform='translateY(0)');
+      c.style.transition='transform .25s ease';
+    })
+  </script>
+    
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+  const apiURL = "https://api.rss2json.com/v1/api.json?rss_url=https://aitnews.com/feed/";
+
+  fetch(apiURL)
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById('news-container');
+      if(data.items && data.items.length > 0){
+        data.items.slice(0,3).forEach(item => {
+          let image = item.thumbnail || '';
+          if(!image){
+            const matches = item.description.match(/<img[^>]+src="([^">]+)"/);
+            image = matches ? matches[1] : 'https://via.placeholder.com/400x250?text=No+Image';
+          }
+
+          const slide = document.createElement('div');
+          slide.classList.add('swiper-slide', 'd-flex', 'justify-content-center');
+          slide.innerHTML = `
+            <div class="news-card d-flex flex-column flex-md-row position-relative p-4 rounded shadow-sm text-white"
+                 style="background: rgba(255,255,255,0.1); max-width:800px; width:100%; gap:20px; align-items:start;">
+              
+              <!-- الصورة -->
+              <div class="news-img flex-shrink-0 mb-3 mb-md-0" style="flex:1;">
+                <img src="${image}" alt="خبر" class="rounded w-100" style="height:200px; object-fit:cover;">
+              </div>
+
+              <!-- المحتوى -->
+              <div class="news-text flex-grow-1 d-flex flex-column" style="flex:1;">
+                <h5 style="font-size:1.2rem;">${item.title}</h5>
+                <p class="small mb-2" style="max-height:100px; overflow:hidden;">${item.description.replace(/<[^>]+>/g,'')}</p>
+                <p class="small text-muted mb-2">${new Date(item.pubDate).toLocaleDateString()}</p>
+                <a href="${item.link}" target="_blank" class="btn btn-sm btn-light text-dark mt-auto" style="width:100px;">عرض المزيد</a>
+              </div>
+            </div>
+          `;
+          container.appendChild(slide);
+        });
+
+        // تهيئة Swiper
+        new Swiper('.news-swiper', {
+          loop: true,
+          pagination: { el: '.swiper-pagination', clickable: true },
+          slidesPerView: 1,
+          spaceBetween: 30,
+        });
+      }
+    })
+    .catch(err => console.error('حدث خطأ أثناء جلب الأخبار:', err));
+</script>
+    
+<script>
+const partnersSwiper = new Swiper('.partners-swiper', {
+  slidesPerView: 2,       // عدد الشعارات في الجوال
+  spaceBetween: 30,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    576: { slidesPerView: 3 },
+    768: { slidesPerView: 4 },
+    992: { slidesPerView: 5 },
+    1200:{ slidesPerView: 6 }
+  }
+});
+
+const testimonialSwiper = new Swiper('.testimonial-swiper', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  }
+});
+
+const whySwiper = new Swiper('.why-swiper', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  centeredSlides: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    768: { slidesPerView: 2 },
+    1200: { slidesPerView: 3 },
+  },
+});
+
+</script>
+
+</body>
+</html>
