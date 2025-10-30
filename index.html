@@ -915,19 +915,14 @@ const whySwiper = new Swiper('.why-swiper', {
     
 
 <script>
-// إزالة الشاشة بعد تحميل الصفحة مع تأخير إضافي
+// إزالة الشاشة بعد تحميل الصفحة
 window.addEventListener('load', function() {
   const preloader = document.getElementById('preloader');
-
-  // تأخير لمدة 3 ثواني قبل بدء الاختفاء
-  setTimeout(() => {
-    preloader.style.opacity = '0';
-    preloader.style.transition = 'opacity 0.7s ease';
-    
-    // إخفاء كامل بعد انتهاء الانتقال
-    setTimeout(() => preloader.style.display = 'none', 700);
-  }, 2000); // <-- هنا 3000 ملي ثانية = 3 ثواني
+  preloader.style.opacity = '0';
+  preloader.style.transition = 'opacity 0.7s ease';
+  setTimeout(() => preloader.style.display = 'none', 700);
 });
+
 // خلفية تقنية متحركة باستخدام Canvas
 const canvas = document.getElementById('preloader-canvas');
 const ctx = canvas.getContext('2d');
